@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .space {
+        margin-top: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+</style>
+
+<body>
+    <form action="">
+        <label for="">Status ayah</label>
+        <div style="display: flex;">
+            <input type="radio" name="ayah" id="h" value="h" onclick="changeLabel(this)">
+            <label for="h">Hidup</label>
+        </div>
+        <div style="display: flex;">
+            <input type="radio" name="ayah" id="m" value="m" onclick="changeLabel(this)">
+            <label for="m">Meninggal</label>
+        </div>
+        <div style="display: flex;">
+            <input type="radio" name="ayah" id="t" value="t" onclick="changeLabel(this)">
+            <label for="t">Tidak diketahui</label>
+        </div>
+        <div class="space">
+            <div id="wrapper">
+                <div class="form-group">
+                    <label for="pendidikan" id="label-pendidikan">Pendidikan ayah <span style="color:red;">*</span></label><br>
+                    <input type="text" name="pendidikan" id="pendidikan" placeholder="Masukan Pendidikan Terakhir" style="width: 100%; height: 35px">
+                </div>
+                <div class="form-group">
+                    <label for="pekerjaan" id="label-pekerjaan">Pekerjaan ayah <span style="color:red;">*</span></label><br>
+                    <input type="text" name="pekerjaan" id="pekerjaan" placeholder="Pekerjaan ayah" style="width: 100%; height: 35px">
+                </div>
+                <div class="form-group">
+                    <label for="deskripsi" id="label-deskripsi">Deskripsi pekerjaan ayah <span style="color:red;">*</span></label><br>
+                    <input type="text" name="deskripsi" id="deskripsi" placeholder="Tuliskan nama spesifikasi pekerjaan ayah" style="width: 100%; height: 35px">
+                </div>
+                <div class="form-group">
+                    <label for="penghasilan" id="label-penghasilan">Total penghasilan ayah <span style="color:red;">*</span></label><br>
+                    <input type="text" name="penghasilan" id="penghasilan" placeholder="Rp." style="width: 100%; height: 35px">
+                </div>
+            </div>
+        </div>
+    </form>
+    <script>
+        function changeLabel(e) {
+            const wrapper = document.getElementById("wrapper");
+            const deskripsiLabel = document.getElementById("label-deskripsi");
+
+            if (e.value === "m") {
+                deskripsiLabel.innerHTML = "Deskripsi pekerjaan ayah semasa hidupnya <span style='color:red;'>*</span>";
+                wrapper.style.display = "block";
+            } else if (e.value === "h") {
+                deskripsiLabel.innerHTML = "Deskripsi pekerjaan ayah <span style='color:red;'>*</span>";
+                wrapper.style.display = "block";
+            } else {
+                wrapper.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gambar dan Filter Opacity</title>
+    <style>
+        /* Style untuk form */
+        .form-container {
+            margin: 20px;
+        }
+
+        /* Style untuk gambar */
+        #image-container {
+            width: 300px;
+            height: 200px;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        #image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.3s ease;
+        }
+
+        /* Style untuk dropdown */
+        select {
+            padding: 10px;
+            font-size: 16px;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <label for="image-select">Pilih Gambar:</label>
+        <select id="image-select">
+            <option value="img\karina.jpg">Gambar 1</option>
+            <option value="img\winter.jpg">Gambar 2</option>
+            <option value="img\ningning.jpg">Gambar 3</option>
+        </select>
+
+        <label for="opacity-select">Pilih Opacity:</label>
+        <select id="opacity-select">
+            <option value="1">1</option>
+            <option value="0.5">0.5</option>
+            <option value="0.2">0.2</option>
+        </select>
+    </div>
+
+    <div id="image-container">
+        <img id="display-image" src="img\karina.jpg" alt="Gambar">
+    </div>
+
+    <script>
+        const imageSelect = document.getElementById('image-select');
+        const opacitySelect = document.getElementById('opacity-select');
+        const displayImage = document.getElementById('display-image');
+
+        // Fungsi untuk mengubah gambar
+        imageSelect.addEventListener('change', function() {
+            displayImage.src = this.value;
+        });
+
+        // Fungsi untuk mengubah opacity
+        opacitySelect.addEventListener('change', function() {
+            displayImage.style.opacity = this.value;
+        });
+
+    </script>
+
+</body>
+</html>

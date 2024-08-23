@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liburan Impian</title>
+    <!-- Link ke Font Awesome untuk ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .menu li {
+            margin: 0 15px;
+        }
+
+        .menu li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .menu li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Header Section */
+        header {
+            text-align: center;
+            padding: 50px;
+            background-color: #00aaff;
+            color: white;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+        /* Destinations Section */
+        #destinasi {
+            padding: 50px 20px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        #destinasi h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .destinations {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .destination {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 10px;
+            width: 300px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .destination img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .destination h3 {
+            font-size: 22px;
+            margin: 15px 0;
+        }
+
+        .destination p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        .info {
+            font-size: 14px;
+            color: #555;
+            margin: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .info span {
+            display: flex;
+            align-items: center;
+        }
+
+        .info i {
+            margin-right: 5px;
+        }
+
+        .read-more {
+            padding: 10px 20px;
+            background-color: #00aaff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .read-more:hover {
+            background-color: #007acc;
+        }
+    </style>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">Liburan Impian</div>
+        <ul class="menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#destinasi">Destinasi</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Jelajahi Dunia dengan Liburan Impian</h1>
+        <p>Nikmati perjalanan tak terlupakan ke destinasi favorit Anda.</p>
+    </header>
+
+    <!-- Destinations Section -->
+    <section id="destinasi">
+        <h2>Destinasi Populer</h2>
+        <div class="destinations">
+            <!-- Pantai -->
+            <div class="destination">
+                <img src="img/pantai.jpg" alt="Pantai Indah">
+                <h3>Liburan ke Pantai</h3>
+                <p>Rasakan keindahan pantai berpasir putih dengan pemandangan laut biru yang menakjubkan.</p>
+                <div class="info">
+                    <span><i class="fas fa-eye"></i> 20,000</span>
+                    <span><i class="fas fa-comments"></i> 350</span>
+                </div>
+                <button class="read-more">Read More</button>
+            </div>
+
+            <!-- Gunung -->
+            <div class="destination">
+                <img src="img/gunung.jpg" alt="Gunung Megah">
+                <h3>Liburan ke Gunung</h3>
+                <p>Nikmati kesejukan dan keindahan alam pegunungan yang asri dan menenangkan.</p>
+                <div class="info">
+                    <span><i class="fas fa-eye"></i> 15,000</span>
+                    <span><i class="fas fa-comments"></i> 220</span>
+                </div>
+                <button class="read-more">Read More</button>
+            </div>
+
+            <!-- New York City -->
+            <div class="destination">
+                <img src="img/nyc.jpg" alt="New York City">
+                <h3>Liburan di New York City</h3>
+                <p>Eksplorasi kota yang tidak pernah tidur dengan atraksi modern dan kehidupan malam yang seru.</p>
+                <div class="info">
+                    <span><i class="fas fa-eye"></i> 30,000</span>
+                    <span><i class="fas fa-comments"></i> 500</span>
+                </div>
+                <button class="read-more">Read More</button>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

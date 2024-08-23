@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Toggle Switch</title>
+    <style>
+        label {
+            width: 300px;
+            height: 200px;
+            position: relative;
+            display: block;
+            background-color: blue;
+            border-radius: 200px;
+            cursor: pointer;
+        }
+
+        label:after {
+            content: ""; /* Tambahkan ini untuk menampilkan pseudo-elemen */
+            width: 180px;
+            height: 180px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: white;
+            border-radius: 50%;
+            transition: 0.3s;
+        }
+
+        input {
+            visibility: hidden;
+        }
+
+        input:checked + label {
+            background-color: aqua;
+        }
+
+        input:checked + label:after {
+            left: 290px;
+            transform: translateX(-100%);
+            background-color: white;
+        }
+
+        label:active:after {
+            width: 260px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Simple Toggle Switch</h2>
+
+<input type="checkbox" id="darkmode-toggle"/>
+<label for="darkmode-toggle"></label>
+
+</body>
+</html>

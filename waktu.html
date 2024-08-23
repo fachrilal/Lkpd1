@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asesmen</title>
+</head>
+
+<body>
+
+    <center>
+        <section>
+            <div class="design">
+                <br><br>
+                <label for="nama">Masukan Nama :</label><br>
+                <input type="text" name="nama" id="nama" placeholder="Masukan Nama Lengkap!!"><br>
+                <label for="nis">NIS:</label><br>
+                <input type="text" name="nis" id="nis" placeholder="Masukan NIS!!"><br>
+                <label for="rayon">Rayon :</label><br>
+                <input type="text" name="rayon" id="rayon" placeholder="Masukan Rayon!!">
+            </div>
+            <br>
+            <button type="button" onclick="submitForm()">Submit</button>
+        </section>
+    </center>
+
+    <section id="result" style="display:none;">
+        <h3>Hasil Inputan:</h3>
+        <p><strong>Nama:</strong> <span id="result-nama"></span></p>
+        <p><strong>NIS:</strong> <span id="result-nis"></span></p>
+        <p><strong>Rayon:</strong> <span id="result-rayon"></span></p>
+    </section>
+
+    <script>
+        let timeout;
+
+        // Mulai timer otomatis ketika halaman dimuat
+        window.onload = function () {
+            timeout = setTimeout(alertFunc, 10000);
+        };
+
+        function alertFunc() {
+            alert("Waktu pengerjaan telah habis");
+        }
+
+        function submitForm() {
+            // Matikan timer untuk alert
+            clearTimeout(timeout);
+
+            // Ambil nilai dari inputan
+            const nama = document.getElementById('nama').value;
+            const nis = document.getElementById('nis').value;
+            const rayon = document.getElementById('rayon').value;
+
+            // Tampilkan hasil inputan
+            document.getElementById('result-nama').textContent = nama;
+            document.getElementById('result-nis').textContent = nis;
+            document.getElementById('result-rayon').textContent = rayon;
+
+            // Tampilkan hasil di section "result"
+            document.getElementById('result').style.display = 'block';
+        }
+
+    </script>
+
+</body>
+
+</html>

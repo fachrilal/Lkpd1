@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert dengan Hitung Mundur di Dalam Halaman</title>
+    <style>
+        /* Style dasar untuk tombol */
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Style untuk kotak alert */
+        #alert-box {
+            display: none;
+            padding: 20px;
+            margin-top: 20px;
+            background-color: #ffffff;
+            color: rgb(153, 5, 5);
+            border-radius: 5px;
+            font-size: 18px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+  <center>  <button onclick="showAlert()">MUNCULKAN ALERT</button></center>
+
+    <!-- Kotak alert untuk hitung mundur -->
+    <div id="alert-box"></div>
+
+    <script>
+        function showAlert() {
+            let count = 5; // Mulai dari 5
+            const alertBox = document.getElementById('alert-box');
+            alertBox.style.display = 'block'; // Tampilkan kotak alert
+
+            const interval = setInterval(() => {
+                if (count > 0) {
+                    alertBox.innerText = "Hitung mundur: " + count +'!!!'; // Update teks di dalam kotak alert
+                    count--;
+                } else {
+                    clearInterval(interval); // Hentikan interval ketika count sudah 0
+                    alertBox.style.display = 'none'; // Sembunyikan kotak alert
+                }
+            }, 1000); // Interval setiap 1 detik
+        }
+    </script>
+
+</body>
+</html>
